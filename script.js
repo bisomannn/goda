@@ -49,3 +49,34 @@ document.getElementById("toggle").addEventListener("click", toggleMode);
 
 // Initialize
 initButtons();
+// لاعب 1: تغيير الاسم
+document.getElementById('edit-player1-name').addEventListener('click', function () {
+  const nameField = document.getElementById('player1-name');
+  const inputField = document.getElementById('player1-name-input');
+
+  if (inputField.style.display === 'none') {
+      // عرض الحقل وتعبئته بالاسم الحالي
+      inputField.style.display = 'block';
+      inputField.value = nameField.textContent;
+  } else {
+      // تحديث الاسم وإخفاء الحقل
+      nameField.textContent = inputField.value || 'Player 1';
+      inputField.style.display = 'none';
+  }
+});
+
+// لاعب 2: تغيير الاسم
+document.getElementById('edit-player2-name').addEventListener('click', function () {
+  const nameField = document.getElementById('player2-name');
+  const inputField = document.getElementById('player2-name-input');
+
+  if (inputField.style.display === 'none') {
+      // عرض الحقل وتعبئته بالاسم الحالي
+      inputField.style.display = 'block';
+      inputField.value = nameField.textContent;
+  } else {
+      // تحديث الاسم وإخفاء الحقل
+      nameField.textContent = inputField.value || 'Player 2';
+      inputField.style.display = 'none';
+  }
+});
