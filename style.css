@@ -107,3 +107,22 @@ button.number-button {
 #player2-buttons {
   margin: 0 auto;
 }
+input {
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 16px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button#edit-player1-name,
+button#edit-player2-name {
+  margin-top: 5px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+}
