@@ -12,7 +12,7 @@ h1 {
 }
 
 button {
-  margin: 10px;
+  margin: 1px;
   font-size: 18px;
   padding: 10px 20px;
   border: none;
@@ -48,13 +48,13 @@ button {
 
 h2 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .button-grid {
   display: grid;
   grid-template-columns: repeat(2, 60px);
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
 }
 
@@ -101,7 +101,7 @@ button.number-button {
 .button-grid {
   display: grid;
   grid-template-columns: repeat(3, 60px); /* شبكتان عموديتان */
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
 }
 
