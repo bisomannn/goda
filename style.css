@@ -37,7 +37,9 @@ button {
 
 .scoreboard {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center; /* محاذاة في المنتصف */
+  gap: 30px; /* تقليل المسافة بين العناصر */
   margin-top: 20px;
 }
 
@@ -48,7 +50,7 @@ button {
 
 h2 {
   font-size: 24px;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
 }
 
 .button-grid {
@@ -75,19 +77,20 @@ button.number-button {
 }
 
 .total-score {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px; /* تقليل الحشو الجانبي */
 }
 
 .total-score h2 {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .player-score {
-  margin: 10px 0;
-}
-
-.player-score {
+  margin: 5px 0;
   font-size: 80px;
 }
 
@@ -98,54 +101,9 @@ button.number-button {
 #player2-score {
   color: rgb(255, 0, 0);
 }
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 60px); /* شبكتان عموديتان */
-  gap: 5px;
-  justify-content: center;
-}
 
-/* أزرار Player 1 */
-#player1-buttons {
-  display: grid;
-  grid-template-areas:
-    "4 1"
-    "5 2"
-    "6 3"
-    "7 7";
-}
-
-#player1-buttons .number-button:nth-child(1) { grid-area: 1 / 3; }
-#player1-buttons .number-button:nth-child(2) { grid-area: 2 / 3; }
-#player1-buttons .number-button:nth-child(3) { grid-area: 3 / 3; }
-#player1-buttons .number-button:nth-child(4) { grid-area: 4 / 3; }
-#player1-buttons .number-button:nth-child(5) { grid-area: 1 / 2; }
-#player1-buttons .number-button:nth-child(6) { grid-area: 2 / 2; }
-#player1-buttons .number-button:nth-child(7) { grid-area: 3 / 2; }
-#player1-buttons .number-button:nth-child(8) { grid-area: 4 / 2; }
-
-/* أزرار Player 2 */
+/* تحسين ترتيب الأزرار */
+#player1-buttons,
 #player2-buttons {
-  display: grid;
-  grid-template-areas:
-    "3 6"
-    "5 2"
-    "7 1"
-    "4 7";
-  transform: rotate(180deg); /* عكس الأزرار للاعب 2 */
+  margin: 0 auto;
 }
-
-#player2-buttons .number-button:nth-child(3) { grid-area: 3 / 3; }
-#player2-buttons .number-button:nth-child(2) { grid-area: 2 / 3; }
-#player2-buttons .number-button:nth-child(5) { grid-area: 1 / 2; }
-#player2-buttons .number-button:nth-child(4) { grid-area: 4 / 3; }
-#player2-buttons .number-button:nth-child(6) { grid-area: 2 / 2; }
-#player2-buttons .number-button:nth-child(1) { grid-area: 1 / 3; }
-#player2-buttons .number-button:nth-child(7) { grid-area: 3 / 2; }
-#player2-buttons .number-button:nth-child(8) { grid-area: 4 / 2; }
-
-#player2-buttons .number-button {
-  transform: rotate(90deg); /* إعادة النص لوضعه الصحيح */
-}
-#player1-buttons .number-button {
-  transform: rotate(90deg); /* إعادة النص لوضعه الصحيح */
